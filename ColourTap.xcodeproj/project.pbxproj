@@ -15,6 +15,7 @@
 		AC1F393923A8E39E00D34F5A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1F393823A8E39E00D34F5A /* ExtensionDelegate.swift */; };
 		AC1F393B23A8E39E00D34F5A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1F393A23A8E39E00D34F5A /* NotificationController.swift */; };
 		AC1F393D23A8E39F00D34F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1F393C23A8E39F00D34F5A /* Assets.xcassets */; };
+		AC1F395123A9148500D34F5A /* GameInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1F395023A9148500D34F5A /* GameInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		AC1F393C23A8E39F00D34F5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC1F393E23A8E39F00D34F5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC1F393F23A8E39F00D34F5A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		AC1F395023A9148500D34F5A /* GameInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,14 +119,23 @@
 		AC1F393523A8E39E00D34F5A /* ColourTap WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				AC1F393623A8E39E00D34F5A /* InterfaceController.swift */,
+				AC1F394F23A90C3700D34F5A /* Controllers */,
 				AC1F393823A8E39E00D34F5A /* ExtensionDelegate.swift */,
-				AC1F393A23A8E39E00D34F5A /* NotificationController.swift */,
 				AC1F393C23A8E39F00D34F5A /* Assets.xcassets */,
 				AC1F393E23A8E39F00D34F5A /* Info.plist */,
 				AC1F393F23A8E39F00D34F5A /* PushNotificationPayload.apns */,
 			);
 			path = "ColourTap WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		AC1F394F23A90C3700D34F5A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC1F393623A8E39E00D34F5A /* InterfaceController.swift */,
+				AC1F393A23A8E39E00D34F5A /* NotificationController.swift */,
+				AC1F395023A9148500D34F5A /* GameInterfaceController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +268,7 @@
 				AC1F393B23A8E39E00D34F5A /* NotificationController.swift in Sources */,
 				AC1F393923A8E39E00D34F5A /* ExtensionDelegate.swift in Sources */,
 				AC1F393723A8E39E00D34F5A /* InterfaceController.swift in Sources */,
+				AC1F395123A9148500D34F5A /* GameInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
