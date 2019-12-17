@@ -12,10 +12,24 @@ import Foundation
 
 class GameInterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var bgGroup: WKInterfaceGroup!
+    @IBOutlet weak var timerWidget: WKInterfaceTimer!
+    
+    var currentExpiryInterval: TimeInterval = 5.0
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
         // Configure interface objects here.
+        bgGroup.setBackgroundColor(.red)
+        timerWidget.setDate(Date().addingTimeInterval(currentExpiryInterval))
+        Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
+            self.timeUp()
+        }
+    }
+    
+    func timeUp() {
+        print("TIME UP!")
     }
 
     override func willActivate() {
@@ -28,4 +42,7 @@ class GameInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction func groupTapped(_ sender: Any) {
+        print(Date())
+    }
 }

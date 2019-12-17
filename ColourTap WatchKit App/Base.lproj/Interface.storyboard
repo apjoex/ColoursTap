@@ -37,10 +37,38 @@ Akinde-peters Joseph @apjoex</string>
             </objects>
             <point key="canvasLocation" x="-107" y="-60"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Quit-->
         <scene sceneID="uqZ-JB-y7w">
             <objects>
-                <controller id="736-Ee-7cw"/>
+                <controller title="Quit" fullScreen="YES" id="736-Ee-7cw" customClass="GameInterfaceController" customModule="ColourTap_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="vertical" id="cRd-Av-mIV">
+                            <items>
+                                <label alignment="center" text="Score: 0" id="Lmv-zb-EUx">
+                                    <fontDescription key="font" type="boldSystem" pointSize="16"/>
+                                </label>
+                                <label alignment="center" verticalAlignment="center" text="Purple" numberOfLines="0" id="jBh-FW-HBk">
+                                    <fontDescription key="font" type="boldSystem" pointSize="30"/>
+                                </label>
+                                <timer alignment="center" verticalAlignment="bottom" enabled="YES" previewedSeconds="5" id="aF5-ID-hFp">
+                                    <calendarUnit key="units" minute="YES" second="YES"/>
+                                </timer>
+                            </items>
+                            <gestureRecognizers>
+                                <tapGestureRecognizer id="MAF-5H-A7H">
+                                    <connections>
+                                        <action selector="groupTapped:" destination="736-Ee-7cw" id="w31-nO-59j"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                            </gestureRecognizers>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="bgGroup" destination="cRd-Av-mIV" id="X9f-Jw-fpC"/>
+                        <outlet property="timerWidget" destination="aF5-ID-hFp" id="khA-SS-dF9"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="-421" y="437"/>
         </scene>
