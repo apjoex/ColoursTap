@@ -12,8 +12,16 @@
                 <controller spacing="10" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ColourTap" customModuleProvider="target">
                     <items>
                         <imageView width="75" height="76" alignment="center" image="logo" contentMode="scaleAspectFit" id="Kfg-iQ-4Rf"/>
-                        <button width="0.90000000000000002" alignment="center" title="Play" id="2BW-tm-2NB"/>
-                        <button width="0.90000000000000002" alignment="center" title="How to Play" id="ZLH-au-AA3"/>
+                        <button width="0.90000000000000002" alignment="center" title="Play" id="2BW-tm-2NB">
+                            <connections>
+                                <segue destination="736-Ee-7cw" kind="modal" id="L38-4m-kK3"/>
+                            </connections>
+                        </button>
+                        <button width="0.90000000000000002" alignment="center" title="How to Play" id="ZLH-au-AA3">
+                            <connections>
+                                <segue destination="yfD-cy-DTS" kind="push" id="aul-VA-B0j"/>
+                            </connections>
+                        </button>
                         <button width="0.90000000000000002" alignment="center" title="High score" id="ufL-EF-UJB">
                             <connections>
                                 <segue destination="3Us-wr-seN" kind="push" id="Ivf-bM-9Sz"/>
@@ -27,7 +35,32 @@ Akinde-peters Joseph @apjoex</string>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="299"/>
+            <point key="canvasLocation" x="-107" y="-60"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="uqZ-JB-y7w">
+            <objects>
+                <controller id="736-Ee-7cw"/>
+            </objects>
+            <point key="canvasLocation" x="-421" y="437"/>
+        </scene>
+        <!--How to play-->
+        <scene sceneID="2Td-gC-Jtz">
+            <objects>
+                <controller title="How to play" id="yfD-cy-DTS">
+                    <items>
+                        <label alignment="left" numberOfLines="0" id="WWh-v7-Bum">
+                            <string key="text">At intervals, a colour will be displayed on the screen along with a name of a colour.
+
+∙ Tap the screen if the name of the color matches the color displayed.
+
+∙ DO NOT tap the screen if they do not match.</string>
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-107" y="501"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -71,7 +104,7 @@ Akinde-peters Joseph @apjoex</string>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="486" y="249"/>
+            <point key="canvasLocation" x="220" y="437"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
