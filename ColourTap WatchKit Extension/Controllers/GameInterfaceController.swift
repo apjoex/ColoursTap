@@ -13,23 +13,56 @@ import Foundation
 class GameInterfaceController: WKInterfaceController {
 
     @IBOutlet weak var bgGroup: WKInterfaceGroup!
+    @IBOutlet weak var colorNameLabel: WKInterfaceLabel!
+    @IBOutlet weak var scoreLabel: WKInterfaceLabel!
     @IBOutlet weak var timerWidget: WKInterfaceTimer!
+
+    var currentExpiryInterval: TimeInterval = 2.0
+    var currentColor: Colour!
+    var displayedName: String = ""
+    var score: Int = 0
+    var currentHighscore: Int = 0
     
-    var currentExpiryInterval: TimeInterval = 5.0
+    var timer: Timer!
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-        // Configure interface objects here.
-        bgGroup.setBackgroundColor(.red)
+        currentHighscore = UserDefaults.standard.integer(forKey: "high_score")
+        start()
+    }
+    
+    func start() {
+        scoreLabel.setText("Score: \(score)")
+        currentColor = Colour.colours.shuffled().first
+        bgGroup.setBackgroundColor(currentColor.output)
+        let alternativeName = Colour.names.filter{ $0 != currentColor.name }.shuffled().first!
+        displayedName = Bool.random() ? currentColor.name : alternativeName
+        colorNameLabel.setText(displayedName)
+        startTimer()
+    }
+    
+    func startTimer() {
         timerWidget.setDate(Date().addingTimeInterval(currentExpiryInterval))
-        Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: currentExpiryInterval, repeats: false) { _ in
             self.timeUp()
         }
+        timerWidget.start()
     }
     
     func timeUp() {
-        print("TIME UP!")
+        timer.invalidate()
+        timerWidget.stop()
+        if currentColor.name == displayedName {
+            if score > currentHighscore {
+                UserDefaults.standard.set(score, forKey: "high_score")
+                WKInterfaceController.reloadRootControllers(withNames: ["NewHighScore"], contexts: [])
+            } else {
+                WKInterfaceController.reloadRootControllers(withNames: ["TimeUp"], contexts: [])
+
+            }
+        } else {
+            start()
+        }
     }
 
     override func willActivate() {
@@ -43,6 +76,20 @@ class GameInterfaceController: WKInterfaceController {
     }
 
     @IBAction func groupTapped(_ sender: Any) {
-        print(Date())
+        timer.invalidate()
+        timerWidget.stop()
+        if currentColor.name == displayedName {
+            score += 1
+            start()
+        } else {
+            // Wrong answer
+            WKInterfaceDevice().play(.failure)
+            if score > currentHighscore {
+                UserDefaults.standard.set(score, forKey: "high_score")
+                WKInterfaceController.reloadRootControllers(withNames: ["NewHighScore"], contexts: [])
+            } else {
+                WKInterfaceController.reloadRootControllers(withNames: ["WrongAnswer"], contexts: [])
+            }
+        }
     }
 }

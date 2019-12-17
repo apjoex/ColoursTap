@@ -11,11 +11,16 @@
 		AC1F392923A8E39900D34F5A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1F392723A8E39900D34F5A /* Interface.storyboard */; };
 		AC1F392B23A8E39E00D34F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1F392A23A8E39E00D34F5A /* Assets.xcassets */; };
 		AC1F393223A8E39E00D34F5A /* ColourTap WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AC1F393123A8E39E00D34F5A /* ColourTap WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		AC1F393723A8E39E00D34F5A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1F393623A8E39E00D34F5A /* InterfaceController.swift */; };
+		AC1F393723A8E39E00D34F5A /* HomeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1F393623A8E39E00D34F5A /* HomeInterfaceController.swift */; };
 		AC1F393923A8E39E00D34F5A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1F393823A8E39E00D34F5A /* ExtensionDelegate.swift */; };
 		AC1F393B23A8E39E00D34F5A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1F393A23A8E39E00D34F5A /* NotificationController.swift */; };
 		AC1F393D23A8E39F00D34F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1F393C23A8E39F00D34F5A /* Assets.xcassets */; };
 		AC1F395123A9148500D34F5A /* GameInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1F395023A9148500D34F5A /* GameInterfaceController.swift */; };
+		AC1F395423A9258F00D34F5A /* Colour.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1F395323A9258F00D34F5A /* Colour.swift */; };
+		AC41FB2423A9370B00E30D88 /* TimeUpInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41FB2323A9370B00E30D88 /* TimeUpInterfaceController.swift */; };
+		AC41FB2623A9373500E30D88 /* WrongAnswerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41FB2523A9373500E30D88 /* WrongAnswerInterfaceController.swift */; };
+		AC41FB2823A9374600E30D88 /* NewHighScoreInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41FB2723A9374600E30D88 /* NewHighScoreInterfaceController.swift */; };
+		AC41FB2A23A9375600E30D88 /* HighScoreInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41FB2923A9375600E30D88 /* HighScoreInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,13 +72,18 @@
 		AC1F392A23A8E39E00D34F5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC1F392C23A8E39E00D34F5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC1F393123A8E39E00D34F5A /* ColourTap WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ColourTap WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC1F393623A8E39E00D34F5A /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		AC1F393623A8E39E00D34F5A /* HomeInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterfaceController.swift; sourceTree = "<group>"; };
 		AC1F393823A8E39E00D34F5A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		AC1F393A23A8E39E00D34F5A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		AC1F393C23A8E39F00D34F5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC1F393E23A8E39F00D34F5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC1F393F23A8E39F00D34F5A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		AC1F395023A9148500D34F5A /* GameInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInterfaceController.swift; sourceTree = "<group>"; };
+		AC1F395323A9258F00D34F5A /* Colour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colour.swift; sourceTree = "<group>"; };
+		AC41FB2323A9370B00E30D88 /* TimeUpInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUpInterfaceController.swift; sourceTree = "<group>"; };
+		AC41FB2523A9373500E30D88 /* WrongAnswerInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongAnswerInterfaceController.swift; sourceTree = "<group>"; };
+		AC41FB2723A9374600E30D88 /* NewHighScoreInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHighScoreInterfaceController.swift; sourceTree = "<group>"; };
+		AC41FB2923A9375600E30D88 /* HighScoreInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +129,7 @@
 		AC1F393523A8E39E00D34F5A /* ColourTap WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				AC1F395223A9256D00D34F5A /* Model */,
 				AC1F394F23A90C3700D34F5A /* Controllers */,
 				AC1F393823A8E39E00D34F5A /* ExtensionDelegate.swift */,
 				AC1F393C23A8E39F00D34F5A /* Assets.xcassets */,
@@ -131,11 +142,23 @@
 		AC1F394F23A90C3700D34F5A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AC1F393623A8E39E00D34F5A /* InterfaceController.swift */,
+				AC1F393623A8E39E00D34F5A /* HomeInterfaceController.swift */,
 				AC1F393A23A8E39E00D34F5A /* NotificationController.swift */,
 				AC1F395023A9148500D34F5A /* GameInterfaceController.swift */,
+				AC41FB2323A9370B00E30D88 /* TimeUpInterfaceController.swift */,
+				AC41FB2923A9375600E30D88 /* HighScoreInterfaceController.swift */,
+				AC41FB2523A9373500E30D88 /* WrongAnswerInterfaceController.swift */,
+				AC41FB2723A9374600E30D88 /* NewHighScoreInterfaceController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AC1F395223A9256D00D34F5A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC1F395323A9258F00D34F5A /* Colour.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,10 +288,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC1F395423A9258F00D34F5A /* Colour.swift in Sources */,
 				AC1F393B23A8E39E00D34F5A /* NotificationController.swift in Sources */,
 				AC1F393923A8E39E00D34F5A /* ExtensionDelegate.swift in Sources */,
-				AC1F393723A8E39E00D34F5A /* InterfaceController.swift in Sources */,
+				AC41FB2823A9374600E30D88 /* NewHighScoreInterfaceController.swift in Sources */,
+				AC1F393723A8E39E00D34F5A /* HomeInterfaceController.swift in Sources */,
+				AC41FB2623A9373500E30D88 /* WrongAnswerInterfaceController.swift in Sources */,
 				AC1F395123A9148500D34F5A /* GameInterfaceController.swift in Sources */,
+				AC41FB2423A9370B00E30D88 /* TimeUpInterfaceController.swift in Sources */,
+				AC41FB2A23A9375600E30D88 /* HighScoreInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

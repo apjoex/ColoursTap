@@ -6,15 +6,15 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15501"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Home-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller spacing="10" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ColourTap" customModuleProvider="target">
+                <controller identifier="Home" spacing="10" id="AgC-eL-Hgc" customClass="HomeInterfaceController" customModule="ColourTap_WatchKit_Extension">
                     <items>
                         <imageView width="75" height="76" alignment="center" image="logo" contentMode="scaleAspectFit" id="Kfg-iQ-4Rf"/>
                         <button width="0.90000000000000002" alignment="center" title="Play" id="2BW-tm-2NB">
                             <connections>
-                                <segue destination="736-Ee-7cw" kind="modal" id="L38-4m-kK3"/>
+                                <action selector="playGame" destination="AgC-eL-Hgc" id="iGc-al-TsY"/>
                             </connections>
                         </button>
                         <button width="0.90000000000000002" alignment="center" title="How to Play" id="ZLH-au-AA3">
@@ -37,10 +37,10 @@ Akinde-peters Joseph @apjoex</string>
             </objects>
             <point key="canvasLocation" x="-107" y="-60"/>
         </scene>
-        <!--Quit-->
+        <!--Game-->
         <scene sceneID="uqZ-JB-y7w">
             <objects>
-                <controller title="Quit" fullScreen="YES" id="736-Ee-7cw" customClass="GameInterfaceController" customModule="ColourTap_WatchKit_Extension">
+                <controller identifier="Game" fullBounds="YES" id="736-Ee-7cw" customClass="GameInterfaceController" customModule="ColourTap_WatchKit_Extension">
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" id="cRd-Av-mIV">
                             <items>
@@ -62,15 +62,95 @@ Akinde-peters Joseph @apjoex</string>
                                 </tapGestureRecognizer>
                             </gestureRecognizers>
                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                         </group>
                     </items>
                     <connections>
                         <outlet property="bgGroup" destination="cRd-Av-mIV" id="X9f-Jw-fpC"/>
+                        <outlet property="colorNameLabel" destination="jBh-FW-HBk" id="Elu-Zx-5OH"/>
+                        <outlet property="scoreLabel" destination="Lmv-zb-EUx" id="CBo-Mg-xTB"/>
                         <outlet property="timerWidget" destination="aF5-ID-hFp" id="khA-SS-dF9"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="-421" y="437"/>
+        </scene>
+        <!--TimeUp-->
+        <scene sceneID="OIR-z9-sFY">
+            <objects>
+                <controller identifier="TimeUp" spacing="8" id="WoP-bv-2CV" customClass="TimeUpInterfaceController" customModule="ColourTap_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text=" " id="gRm-5o-ubi"/>
+                        <imageView width="75" height="75" alignment="center" image="alarm" contentMode="scaleAspectFit" id="UPz-xw-IK0"/>
+                        <label alignment="center" text="Time Up!" id="BMy-XU-LkJ">
+                            <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                        </label>
+                        <label width="1" alignment="left" textAlignment="center" numberOfLines="0" id="G2n-ai-bzg">
+                            <string key="text">You have to be faster next time.
+</string>
+                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                        </label>
+                        <button width="1" alignment="left" title="Try Again" id="LdR-kx-0SP">
+                            <connections>
+                                <action selector="retry" destination="WoP-bv-2CV" id="xTp-31-yZ9"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-421" y="918.5"/>
+        </scene>
+        <!--WrongAnswer-->
+        <scene sceneID="s65-Ag-GLP">
+            <objects>
+                <controller identifier="WrongAnswer" id="9y2-8s-msf" customClass="WrongAnswerInterfaceController" customModule="ColourTap_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text=" " id="D0c-Pc-QTX"/>
+                        <imageView width="75" height="75" alignment="center" image="wrong" contentMode="scaleAspectFit" id="e76-Om-E5G"/>
+                        <label alignment="center" text="Incorrect" id="mxr-26-eTw">
+                            <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                        </label>
+                        <label width="1" alignment="left" text=" " textAlignment="center" numberOfLines="0" id="7kK-0g-AZC">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                        </label>
+                        <button width="1" alignment="left" title="Try Again" id="3Vm-s6-Wp3">
+                            <connections>
+                                <action selector="retry" destination="9y2-8s-msf" id="u9V-WB-7sb"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-107" y="919"/>
+        </scene>
+        <!--NewHighScore-->
+        <scene sceneID="ZQF-YH-kyo">
+            <objects>
+                <controller identifier="NewHighScore" id="Pwp-4J-hwM" customClass="NewHighScoreInterfaceController" customModule="ColourTap_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text=" " id="Ics-ej-ZPQ"/>
+                        <imageView width="75" height="75" alignment="center" image="trophy" contentMode="scaleAspectFit" id="Neo-8K-Xik"/>
+                        <label alignment="center" text="WooHoo!" id="bAX-tg-hvA">
+                            <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                        </label>
+                        <label width="1" alignment="left" text="You have outdone yourself and set a new high score!" textAlignment="center" numberOfLines="0" id="L3N-vo-Uct">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                        </label>
+                        <label alignment="center" text="0" numberOfLines="0" id="uaq-vf-iBZ">
+                            <fontDescription key="font" type="system" pointSize="24"/>
+                        </label>
+                        <button width="1" alignment="left" title="Take me Home" id="C9F-Kx-mY3">
+                            <connections>
+                                <action selector="goHome" destination="Pwp-4J-hwM" id="D6g-Ph-3vC"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="highScoreLabel" destination="uaq-vf-iBZ" id="UvG-zm-NXg"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="919"/>
         </scene>
         <!--How to play-->
         <scene sceneID="2Td-gC-Jtz">
@@ -78,7 +158,8 @@ Akinde-peters Joseph @apjoex</string>
                 <controller title="How to play" id="yfD-cy-DTS">
                     <items>
                         <label alignment="left" numberOfLines="0" id="WWh-v7-Bum">
-                            <string key="text">At intervals, a colour will be displayed on the screen along with a name of a colour.
+                            <string key="text">
+At intervals, a colour will be displayed on the screen along with a name of a colour.
 
 ∙ Tap the screen if the name of the color matches the color displayed.
 
@@ -105,19 +186,19 @@ Akinde-peters Joseph @apjoex</string>
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="1267"/>
+            <point key="canvasLocation" x="220" y="1740"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
                 <controller id="4sK-HA-Art" customClass="NotificationController" customModule="ColourTap" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="486" y="1267"/>
+            <point key="canvasLocation" x="486" y="1892"/>
         </scene>
         <!--High score-->
         <scene sceneID="plc-1s-2un">
             <objects>
-                <controller title="High score" id="3Us-wr-seN">
+                <controller title="High score" id="3Us-wr-seN" customClass="HighScoreInterfaceController" customModule="ColourTap_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="center" verticalAlignment="center" layout="vertical" spacing="6" id="cQp-AI-Vzm">
                             <items>
@@ -130,6 +211,9 @@ Akinde-peters Joseph @apjoex</string>
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="highScoreLabel" destination="iKr-BV-dHX" id="ppk-pT-5G2"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="437"/>
@@ -139,10 +223,13 @@ Akinde-peters Joseph @apjoex</string>
             <objects>
                 <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="ColourTap" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="486" y="962"/>
+            <point key="canvasLocation" x="486" y="1564"/>
         </scene>
     </scenes>
     <resources>
+        <image name="alarm" width="300" height="295"/>
         <image name="logo" width="300" height="292"/>
+        <image name="trophy" width="300" height="300"/>
+        <image name="wrong" width="300" height="300"/>
     </resources>
 </document>
