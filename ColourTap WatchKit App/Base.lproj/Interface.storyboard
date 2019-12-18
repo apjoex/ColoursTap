@@ -48,7 +48,7 @@ Akinde-peters Joseph @apjoex</string>
                                     <fontDescription key="font" type="boldSystem" pointSize="16"/>
                                 </label>
                                 <label alignment="center" verticalAlignment="center" text="Purple" numberOfLines="0" id="jBh-FW-HBk">
-                                    <fontDescription key="font" type="boldSystem" pointSize="30"/>
+                                    <fontDescription key="font" type="boldSystem" pointSize="32"/>
                                 </label>
                                 <timer alignment="center" verticalAlignment="bottom" enabled="YES" previewedSeconds="5" id="aF5-ID-hFp">
                                     <calendarUnit key="units" minute="YES" second="YES"/>
@@ -60,6 +60,16 @@ Akinde-peters Joseph @apjoex</string>
                                         <action selector="groupTapped:" destination="736-Ee-7cw" id="w31-nO-59j"/>
                                     </connections>
                                 </tapGestureRecognizer>
+                                <swipeGestureRecognizer direction="2" id="ScL-bM-xvi">
+                                    <connections>
+                                        <action selector="groupSwiped:" destination="736-Ee-7cw" id="2ZL-Bn-Z4h"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
+                                <swipeGestureRecognizer id="Sqa-PP-5Jy">
+                                    <connections>
+                                        <action selector="groupSwiped:" destination="736-Ee-7cw" id="Kqz-5M-bGS"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
                             </gestureRecognizers>
                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
@@ -90,9 +100,14 @@ Akinde-peters Joseph @apjoex</string>
 </string>
                             <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
                         </label>
-                        <button width="1" alignment="left" title="Try Again" id="LdR-kx-0SP">
+                        <button width="0.90000000000000002" alignment="center" title="Try Again" id="LdR-kx-0SP">
                             <connections>
                                 <action selector="retry" destination="WoP-bv-2CV" id="xTp-31-yZ9"/>
+                            </connections>
+                        </button>
+                        <button width="0.90000000000000002" alignment="center" title="Take me Home" id="Yib-7I-LeY">
+                            <connections>
+                                <action selector="goHome" destination="WoP-bv-2CV" id="XqJ-zB-Mmj"/>
                             </connections>
                         </button>
                     </items>
@@ -113,9 +128,14 @@ Akinde-peters Joseph @apjoex</string>
                         <label width="1" alignment="left" text=" " textAlignment="center" numberOfLines="0" id="7kK-0g-AZC">
                             <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
                         </label>
-                        <button width="1" alignment="left" title="Try Again" id="3Vm-s6-Wp3">
+                        <button width="0.90000000000000002" alignment="center" title="Try Again" id="3Vm-s6-Wp3">
                             <connections>
                                 <action selector="retry" destination="9y2-8s-msf" id="u9V-WB-7sb"/>
+                            </connections>
+                        </button>
+                        <button width="0.90000000000000002" alignment="center" title="Take me Home" id="dGT-4w-x3D">
+                            <connections>
+                                <action selector="goHome" destination="9y2-8s-msf" id="BKe-uk-3H5"/>
                             </connections>
                         </button>
                     </items>
@@ -139,7 +159,7 @@ Akinde-peters Joseph @apjoex</string>
                         <label alignment="center" text="0" numberOfLines="0" id="uaq-vf-iBZ">
                             <fontDescription key="font" type="system" pointSize="24"/>
                         </label>
-                        <button width="1" alignment="left" title="Take me Home" id="C9F-Kx-mY3">
+                        <button width="0.90000000000000002" alignment="center" title="Take me Home" id="C9F-Kx-mY3">
                             <connections>
                                 <action selector="goHome" destination="Pwp-4J-hwM" id="D6g-Ph-3vC"/>
                             </connections>
@@ -161,9 +181,9 @@ Akinde-peters Joseph @apjoex</string>
                             <string key="text">
 At intervals, a colour will be displayed on the screen along with a name of a colour.
 
-∙ Tap the screen if the name of the color matches the color displayed.
+∙ TAP if the name of the color matches the color displayed.
 
-∙ DO NOT tap the screen if they do not match.</string>
+∙ SWIPE if the name of the color does not match the color displayed.</string>
                             <fontDescription key="font" style="UICTFontTextStyleBody"/>
                         </label>
                     </items>

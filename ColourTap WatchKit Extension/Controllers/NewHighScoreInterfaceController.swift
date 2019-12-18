@@ -22,17 +22,7 @@ class NewHighScoreInterfaceController: WKInterfaceController {
         highScoreLabel.setText("\(highScore)\n")
     }
 
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-    }
-
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
-
     @IBAction func goHome() {
-        WKInterfaceController.reloadRootControllers(withNames: ["Home"], contexts: [])
+        WKInterfaceController.reloadRootPageControllers(withNames: ["Home"], contexts: [], orientation: .vertical, pageIndex: 0)
     }
 }

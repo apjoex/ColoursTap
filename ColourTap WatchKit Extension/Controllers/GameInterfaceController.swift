@@ -35,7 +35,7 @@ class GameInterfaceController: WKInterfaceController {
         scoreLabel.setText("Score: \(score)")
         currentColor = Colour.colours.shuffled().first
         bgGroup.setBackgroundColor(currentColor.output)
-        let alternativeName = Colour.names.filter{ $0 != currentColor.name }.shuffled().first!
+        let alternativeName = Colour.colours.map{ $0.name }.filter{ $0 != currentColor.name }.shuffled().first!
         displayedName = Bool.random() ? currentColor.name : alternativeName
         colorNameLabel.setText(displayedName)
         startTimer()
@@ -50,45 +50,50 @@ class GameInterfaceController: WKInterfaceController {
     }
     
     func timeUp() {
-        timer.invalidate()
-        timerWidget.stop()
-        if currentColor.name == displayedName {
-            if score > currentHighscore {
-                UserDefaults.standard.set(score, forKey: "high_score")
-                WKInterfaceController.reloadRootControllers(withNames: ["NewHighScore"], contexts: [])
-            } else {
-                WKInterfaceController.reloadRootControllers(withNames: ["TimeUp"], contexts: [])
-
-            }
+        resetTimer()
+        if score > currentHighscore {
+            UserDefaults.standard.set(score, forKey: "high_score")
+            WKInterfaceDevice().play(.success)
+            WKInterfaceController.reloadRootPageControllers(withNames: ["NewHighScore"], contexts: [], orientation: .vertical, pageIndex: 0)
         } else {
-            start()
+            WKInterfaceDevice().play(.failure)
+            WKInterfaceController.reloadRootPageControllers(withNames: ["TimeUp"], contexts: [], orientation: .vertical, pageIndex: 0)
         }
     }
-
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-    }
-
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
+    
+    func resetTimer() {
+        timer.invalidate()
+        timerWidget.stop()
     }
 
     @IBAction func groupTapped(_ sender: Any) {
-        timer.invalidate()
-        timerWidget.stop()
+        resetTimer()
         if currentColor.name == displayedName {
             score += 1
             start()
         } else {
-            // Wrong answer
             WKInterfaceDevice().play(.failure)
             if score > currentHighscore {
                 UserDefaults.standard.set(score, forKey: "high_score")
-                WKInterfaceController.reloadRootControllers(withNames: ["NewHighScore"], contexts: [])
+                WKInterfaceController.reloadRootPageControllers(withNames: ["NewHighScore"], contexts: [], orientation: .vertical, pageIndex: 0)
             } else {
-                WKInterfaceController.reloadRootControllers(withNames: ["WrongAnswer"], contexts: [])
+                WKInterfaceController.reloadRootPageControllers(withNames: ["WrongAnswer"], contexts: [], orientation: .vertical, pageIndex: 0)
+            }
+        }
+    }
+    
+    @IBAction func groupSwiped(_ sender: Any) {
+        resetTimer()
+        if currentColor.name != displayedName {
+            score += 1
+            start()
+        } else {
+            WKInterfaceDevice().play(.failure)
+            if score > currentHighscore {
+                UserDefaults.standard.set(score, forKey: "high_score")
+                WKInterfaceController.reloadRootPageControllers(withNames: ["NewHighScore"], contexts: [], orientation: .vertical, pageIndex: 0)
+            } else {
+                WKInterfaceController.reloadRootPageControllers(withNames: ["WrongAnswer"], contexts: [], orientation: .vertical, pageIndex: 0)
             }
         }
     }

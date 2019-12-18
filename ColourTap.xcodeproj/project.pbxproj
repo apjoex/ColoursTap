@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AC1F392323A8E39900D34F5A /* ColourTap.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AC1F392223A8E39900D34F5A /* ColourTap.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AC1F392323A8E39900D34F5A /* Colours.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AC1F392223A8E39900D34F5A /* Colours.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AC1F392923A8E39900D34F5A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1F392723A8E39900D34F5A /* Interface.storyboard */; };
 		AC1F392B23A8E39E00D34F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1F392A23A8E39E00D34F5A /* Assets.xcassets */; };
 		AC1F393223A8E39E00D34F5A /* ColourTap WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AC1F393123A8E39E00D34F5A /* ColourTap WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -58,7 +58,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				AC1F392323A8E39900D34F5A /* ColourTap.app in Embed Watch Content */,
+				AC1F392323A8E39900D34F5A /* Colours.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,8 +66,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AC1F391E23A8E39900D34F5A /* ColourTap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColourTap.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC1F392223A8E39900D34F5A /* ColourTap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColourTap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC1F391E23A8E39900D34F5A /* Colours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colours.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC1F392223A8E39900D34F5A /* Colours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colours.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1F392823A8E39900D34F5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		AC1F392A23A8E39E00D34F5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC1F392C23A8E39E00D34F5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,8 +109,8 @@
 		AC1F391F23A8E39900D34F5A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC1F391E23A8E39900D34F5A /* ColourTap.app */,
-				AC1F392223A8E39900D34F5A /* ColourTap.app */,
+				AC1F391E23A8E39900D34F5A /* Colours.app */,
+				AC1F392223A8E39900D34F5A /* Colours.app */,
 				AC1F393123A8E39E00D34F5A /* ColourTap WatchKit Extension.appex */,
 			);
 			name = Products;
@@ -178,7 +178,7 @@
 			);
 			name = ColourTap;
 			productName = ColourTap;
-			productReference = AC1F391E23A8E39900D34F5A /* ColourTap.app */;
+			productReference = AC1F391E23A8E39900D34F5A /* Colours.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
 		};
 		AC1F392123A8E39900D34F5A /* ColourTap WatchKit App */ = {
@@ -195,7 +195,7 @@
 			);
 			name = "ColourTap WatchKit App";
 			productName = "ColourTap WatchKit App";
-			productReference = AC1F392223A8E39900D34F5A /* ColourTap.app */;
+			productReference = AC1F392223A8E39900D34F5A /* Colours.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 		AC1F393023A8E39E00D34F5A /* ColourTap WatchKit Extension */ = {
@@ -493,7 +493,7 @@
 				IBSC_MODULE = ColourTap_WatchKit_Extension;
 				INFOPLIST_FILE = "ColourTap WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = dev.apjoex.ColourTap.watchkitapp;
-				PRODUCT_NAME = ColourTap;
+				PRODUCT_NAME = Colours;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -512,7 +512,7 @@
 				IBSC_MODULE = ColourTap_WatchKit_Extension;
 				INFOPLIST_FILE = "ColourTap WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = dev.apjoex.ColourTap.watchkitapp;
-				PRODUCT_NAME = ColourTap;
+				PRODUCT_NAME = Colours;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -529,7 +529,7 @@
 				DEVELOPMENT_TEAM = UYMTCS89FV;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.apjoex.ColourTap;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Colours;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -542,7 +542,7 @@
 				DEVELOPMENT_TEAM = UYMTCS89FV;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.apjoex.ColourTap;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Colours;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
