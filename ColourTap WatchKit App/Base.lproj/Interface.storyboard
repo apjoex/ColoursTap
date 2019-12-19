@@ -50,7 +50,7 @@ Akinde-peters Joseph @apjoex</string>
                                 <label alignment="center" verticalAlignment="center" text="Purple" numberOfLines="0" id="jBh-FW-HBk">
                                     <fontDescription key="font" type="boldSystem" pointSize="32"/>
                                 </label>
-                                <timer alignment="center" verticalAlignment="bottom" enabled="YES" previewedSeconds="5" id="aF5-ID-hFp">
+                                <timer alignment="center" verticalAlignment="bottom" hidden="YES" enabled="YES" previewedSeconds="5" id="aF5-ID-hFp">
                                     <calendarUnit key="units" minute="YES" second="YES"/>
                                 </timer>
                             </items>
@@ -211,7 +211,7 @@ At intervals, a colour will be displayed on the screen along with a name of a co
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="ColourTap" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Colours" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="486" y="1892"/>
         </scene>
@@ -241,7 +241,7 @@ At intervals, a colour will be displayed on the screen along with a name of a co
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="ColourTap" customModuleProvider="target"/>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="Colours" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="486" y="1564"/>
         </scene>
