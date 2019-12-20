@@ -21,6 +21,7 @@
 		AC41FB2623A9373500E30D88 /* WrongAnswerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41FB2523A9373500E30D88 /* WrongAnswerInterfaceController.swift */; };
 		AC41FB2823A9374600E30D88 /* NewHighScoreInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41FB2723A9374600E30D88 /* NewHighScoreInterfaceController.swift */; };
 		AC41FB2A23A9375600E30D88 /* HighScoreInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41FB2923A9375600E30D88 /* HighScoreInterfaceController.swift */; };
+		ACB8BF6A23ACDEAA00B9867B /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8BF6923ACDEAA00B9867B /* GameManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		AC41FB2523A9373500E30D88 /* WrongAnswerInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongAnswerInterfaceController.swift; sourceTree = "<group>"; };
 		AC41FB2723A9374600E30D88 /* NewHighScoreInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHighScoreInterfaceController.swift; sourceTree = "<group>"; };
 		AC41FB2923A9375600E30D88 /* HighScoreInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreInterfaceController.swift; sourceTree = "<group>"; };
+		ACB8BF6923ACDEAA00B9867B /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		AC1F393523A8E39E00D34F5A /* ColourTap WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				ACB8BF6823ACDE9500B9867B /* Manager */,
 				AC1F395223A9256D00D34F5A /* Model */,
 				AC1F394F23A90C3700D34F5A /* Controllers */,
 				AC1F393823A8E39E00D34F5A /* ExtensionDelegate.swift */,
@@ -159,6 +162,14 @@
 				AC1F395323A9258F00D34F5A /* Colour.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ACB8BF6823ACDE9500B9867B /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				ACB8BF6923ACDEAA00B9867B /* GameManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +308,7 @@
 				AC1F395123A9148500D34F5A /* GameInterfaceController.swift in Sources */,
 				AC41FB2423A9370B00E30D88 /* TimeUpInterfaceController.swift in Sources */,
 				AC41FB2A23A9375600E30D88 /* HighScoreInterfaceController.swift in Sources */,
+				ACB8BF6A23ACDEAA00B9867B /* GameManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +456,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UYMTCS89FV;
 				INFOPLIST_FILE = "ColourTap WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -451,6 +464,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.apjoex.ColourTap.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -466,6 +480,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UYMTCS89FV;
 				INFOPLIST_FILE = "ColourTap WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -473,6 +488,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.apjoex.ColourTap.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -489,9 +505,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UYMTCS89FV;
 				IBSC_MODULE = ColourTap_WatchKit_Extension;
 				INFOPLIST_FILE = "ColourTap WatchKit App/Info.plist";
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.apjoex.ColourTap.watchkitapp;
 				PRODUCT_NAME = ColoursTap;
 				SDKROOT = watchos;
@@ -508,9 +526,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UYMTCS89FV;
 				IBSC_MODULE = ColourTap_WatchKit_Extension;
 				INFOPLIST_FILE = "ColourTap WatchKit App/Info.plist";
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.apjoex.ColourTap.watchkitapp;
 				PRODUCT_NAME = ColoursTap;
 				SDKROOT = watchos;
@@ -525,9 +545,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UYMTCS89FV;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.apjoex.ColourTap;
 				PRODUCT_NAME = ColoursTap;
 				SWIFT_VERSION = 5.0;
@@ -538,9 +558,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UYMTCS89FV;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.apjoex.ColourTap;
 				PRODUCT_NAME = ColoursTap;
 				SWIFT_VERSION = 5.0;
