@@ -17,7 +17,18 @@ class GameInterfaceController: WKInterfaceController {
     @IBOutlet weak var scoreLabel: WKInterfaceLabel!
     @IBOutlet weak var timerWidget: WKInterfaceTimer!
 
-    var currentExpiryInterval: TimeInterval = 2.0
+    var currentExpiryInterval: TimeInterval {
+        get {
+            switch score {
+            case 0..<50:
+                return 2.0
+            case 50..<100:
+                return 1.5
+            default:
+                return 1.0
+            }
+        }
+    }
     var currentColor: Colour!
     var displayedName: String = ""
     var score: Int = 0
@@ -33,15 +44,16 @@ class GameInterfaceController: WKInterfaceController {
     
     func start() {
         scoreLabel.setText("Score: \(score)")
-        currentColor = Colour.colours.shuffled().first
+        currentColor = GameManager.colours.shuffled().first
         bgGroup.setBackgroundColor(currentColor.output)
-        let alternativeName = Colour.colours.map{ $0.name }.filter{ $0 != currentColor.name }.shuffled().first!
+        let alternativeName = GameManager.colours.map{ $0.name }.filter{ $0 != currentColor.name }.shuffled().first!
         displayedName = Bool.random() ? currentColor.name : alternativeName
         colorNameLabel.setText(displayedName)
         startTimer()
     }
     
     func startTimer() {
+        print("TIMER IS \(currentExpiryInterval)")
         timerWidget.setDate(Date().addingTimeInterval(currentExpiryInterval))
         timer = Timer.scheduledTimer(withTimeInterval: currentExpiryInterval, repeats: false) { _ in
             self.timeUp()
@@ -57,6 +69,7 @@ class GameInterfaceController: WKInterfaceController {
             WKInterfaceController.reloadRootPageControllers(withNames: ["NewHighScore"], contexts: [], orientation: .vertical, pageIndex: 0)
         } else {
             WKInterfaceDevice().play(.failure)
+            GameManager.currentScore = score
             WKInterfaceController.reloadRootPageControllers(withNames: ["TimeUp"], contexts: [], orientation: .vertical, pageIndex: 0)
         }
     }
@@ -73,6 +86,7 @@ class GameInterfaceController: WKInterfaceController {
             start()
         } else {
             WKInterfaceDevice().play(.failure)
+            GameManager.currentScore = score
             if score > currentHighscore {
                 UserDefaults.standard.set(score, forKey: "high_score")
                 WKInterfaceController.reloadRootPageControllers(withNames: ["NewHighScore"], contexts: [], orientation: .vertical, pageIndex: 0)
@@ -89,6 +103,7 @@ class GameInterfaceController: WKInterfaceController {
             start()
         } else {
             WKInterfaceDevice().play(.failure)
+            GameManager.currentScore = score
             if score > currentHighscore {
                 UserDefaults.standard.set(score, forKey: "high_score")
                 WKInterfaceController.reloadRootPageControllers(withNames: ["NewHighScore"], contexts: [], orientation: .vertical, pageIndex: 0)
