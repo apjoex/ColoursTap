@@ -53,7 +53,6 @@ class GameInterfaceController: WKInterfaceController {
     }
     
     func startTimer() {
-        print("TIMER IS \(currentExpiryInterval)")
         timerWidget.setDate(Date().addingTimeInterval(currentExpiryInterval))
         timer = Timer.scheduledTimer(withTimeInterval: currentExpiryInterval, repeats: false) { _ in
             self.timeUp()
