@@ -12,10 +12,12 @@ import Foundation
 
 class TimeUpInterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var scoreLabel: WKInterfaceLabel!
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
+        scoreLabel.setText("Your score: \(GameManager.currentScore)\n")
     }
 
     @IBAction func retry() {
