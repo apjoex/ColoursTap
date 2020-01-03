@@ -16,7 +16,6 @@ class TimeUpInterfaceController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
         scoreLabel.setText("Your score: \(GameManager.currentScore)\n")
     }
 
