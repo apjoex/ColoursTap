@@ -9,7 +9,6 @@
 import WatchKit
 import Foundation
 
-
 class GameInterfaceController: WKInterfaceController {
 
     @IBOutlet weak var bgGroup: WKInterfaceGroup!
@@ -18,15 +17,13 @@ class GameInterfaceController: WKInterfaceController {
     @IBOutlet weak var timerWidget: WKInterfaceTimer!
 
     var currentExpiryInterval: TimeInterval {
-        get {
-            switch score {
-            case 0..<50:
-                return 2.0
-            case 50..<100:
-                return 1.5
-            default:
-                return 1.0
-            }
+        switch score {
+        case 0..<50:
+            return 2.0
+        case 50..<100:
+            return 1.5
+        default:
+            return 1.0
         }
     }
     var currentColor: Colour!
@@ -46,7 +43,7 @@ class GameInterfaceController: WKInterfaceController {
         scoreLabel.setText("Score: \(score)")
         currentColor = GameManager.colours.shuffled().first
         bgGroup.setBackgroundColor(currentColor.output)
-        let alternativeName = GameManager.colours.map{ $0.name }.filter{ $0 != currentColor.name }.shuffled().first!
+        let alternativeName = GameManager.colours.map { $0.name }.filter { $0 != currentColor.name }.shuffled().first!
         displayedName = Bool.random() ? currentColor.name : alternativeName
         colorNameLabel.setText(displayedName)
         startTimer()

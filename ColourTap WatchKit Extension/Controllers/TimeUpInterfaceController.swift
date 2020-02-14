@@ -9,7 +9,6 @@
 import WatchKit
 import Foundation
 
-
 class TimeUpInterfaceController: WKInterfaceController {
 
     @IBOutlet weak var scoreLabel: WKInterfaceLabel!

@@ -9,7 +9,6 @@
 import WatchKit
 import Foundation
 
-
 class NewHighScoreInterfaceController: WKInterfaceController {
 
     @IBOutlet weak var highScoreLabel: WKInterfaceLabel!

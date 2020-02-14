@@ -9,7 +9,6 @@
 import WatchKit
 import Foundation
 
-
 class WrongAnswerInterfaceController: WKInterfaceController {
 
     @IBOutlet weak var scoreLabel: WKInterfaceLabel!

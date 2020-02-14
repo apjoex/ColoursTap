@@ -1,0 +1,4 @@
+line_length: 320
+
+disabled_rules:
+  - trailing_whitespace
