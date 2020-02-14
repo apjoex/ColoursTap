@@ -35,7 +35,7 @@ class GameInterfaceController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        currentHighscore = UserDefaults.standard.integer(forKey: "high_score")
+        currentHighscore = GameManager.highScore
         start()
     }
     
@@ -60,7 +60,7 @@ class GameInterfaceController: WKInterfaceController {
     func timeUp() {
         resetTimer()
         if score > currentHighscore {
-            UserDefaults.standard.set(score, forKey: "high_score")
+            GameManager.highScore = score
             WKInterfaceDevice().play(.success)
             WKInterfaceController.reloadRootPageControllers(withNames: ["NewHighScore"], contexts: [], orientation: .vertical, pageIndex: 0)
         } else {
@@ -84,7 +84,7 @@ class GameInterfaceController: WKInterfaceController {
             WKInterfaceDevice().play(.failure)
             GameManager.currentScore = score
             if score > currentHighscore {
-                UserDefaults.standard.set(score, forKey: "high_score")
+                GameManager.highScore = score
                 WKInterfaceController.reloadRootPageControllers(withNames: ["NewHighScore"], contexts: [], orientation: .vertical, pageIndex: 0)
             } else {
                 WKInterfaceController.reloadRootPageControllers(withNames: ["WrongAnswer"], contexts: [], orientation: .vertical, pageIndex: 0)
@@ -101,7 +101,7 @@ class GameInterfaceController: WKInterfaceController {
             WKInterfaceDevice().play(.failure)
             GameManager.currentScore = score
             if score > currentHighscore {
-                UserDefaults.standard.set(score, forKey: "high_score")
+                GameManager.highScore = score
                 WKInterfaceController.reloadRootPageControllers(withNames: ["NewHighScore"], contexts: [], orientation: .vertical, pageIndex: 0)
             } else {
                 WKInterfaceController.reloadRootPageControllers(withNames: ["WrongAnswer"], contexts: [], orientation: .vertical, pageIndex: 0)

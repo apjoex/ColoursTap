@@ -23,4 +23,14 @@ class GameManager {
     }
     
     static var currentScore = 0
+    
+    static var highScore: Int {
+        get {
+            return UserDefaults.standard.integer(forKey: "high_score")
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: "high_score")
+        }
+    }
 }

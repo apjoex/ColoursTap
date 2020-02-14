@@ -17,7 +17,7 @@ class HighScoreInterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         
         // Configure interface objects here.
-        let highScore = UserDefaults.standard.integer(forKey: "high_score")
+        let highScore = GameManager.highScore
         highScoreLabel.setText("\(highScore)")
     }
 
