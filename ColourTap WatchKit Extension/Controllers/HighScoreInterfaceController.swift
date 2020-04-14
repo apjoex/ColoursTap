@@ -13,11 +13,13 @@ class HighScoreInterfaceController: WKInterfaceController {
 
     @IBOutlet weak var highScoreLabel: WKInterfaceLabel!
     
+    let manager = GameManager.shared
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
         // Configure interface objects here.
-        let highScore = GameManager.highScore
+        let highScore = manager.highScore
         highScoreLabel.setText("\(highScore)")
     }
 

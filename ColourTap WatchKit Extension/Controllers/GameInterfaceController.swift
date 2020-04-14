@@ -18,9 +18,9 @@ class GameInterfaceController: WKInterfaceController {
 
     var currentExpiryInterval: TimeInterval {
         switch score {
-        case 0..<50:
+        case 0 ..< 50:
             return 2.0
-        case 50..<100:
+        case 50 ..< 100:
             return 1.5
         default:
             return 1.0
@@ -32,18 +32,19 @@ class GameInterfaceController: WKInterfaceController {
     var currentHighscore: Int = 0
     
     var timer: Timer!
+    let manager = GameManager.shared
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        currentHighscore = GameManager.highScore
+        currentHighscore = manager.highScore
         start()
     }
     
     func start() {
         scoreLabel.setText("Score: \(score)")
-        currentColor = GameManager.colours.shuffled().first
-        bgGroup.setBackgroundColor(currentColor.output)
-        let alternativeName = GameManager.colours.map { $0.name }.filter { $0 != currentColor.name }.shuffled().first!
+        currentColor = manager.colours.shuffled().first
+        bgGroup.setBackgroundColor(currentColor.color)
+        let alternativeName = manager.colours.map { $0.name }.filter { $0 != currentColor.name }.shuffled().first!
         displayedName = Bool.random() ? currentColor.name : alternativeName
         colorNameLabel.setText(displayedName)
         startTimer()
@@ -60,12 +61,12 @@ class GameInterfaceController: WKInterfaceController {
     func timeUp() {
         resetTimer()
         if score > currentHighscore {
-            GameManager.highScore = score
+            manager.highScore = score
             WKInterfaceDevice().play(.success)
             WKInterfaceController.reloadRootPageControllers(withNames: ["NewHighScore"], contexts: [], orientation: .vertical, pageIndex: 0)
         } else {
             WKInterfaceDevice().play(.failure)
-            GameManager.currentScore = score
+            manager.currentScore = score
             WKInterfaceController.reloadRootPageControllers(withNames: ["TimeUp"], contexts: [], orientation: .vertical, pageIndex: 0)
         }
     }
@@ -82,9 +83,9 @@ class GameInterfaceController: WKInterfaceController {
             start()
         } else {
             WKInterfaceDevice().play(.failure)
-            GameManager.currentScore = score
+            manager.currentScore = score
             if score > currentHighscore {
-                GameManager.highScore = score
+                manager.highScore = score
                 WKInterfaceController.reloadRootPageControllers(withNames: ["NewHighScore"], contexts: [], orientation: .vertical, pageIndex: 0)
             } else {
                 WKInterfaceController.reloadRootPageControllers(withNames: ["WrongAnswer"], contexts: [], orientation: .vertical, pageIndex: 0)
@@ -99,9 +100,9 @@ class GameInterfaceController: WKInterfaceController {
             start()
         } else {
             WKInterfaceDevice().play(.failure)
-            GameManager.currentScore = score
+            manager.currentScore = score
             if score > currentHighscore {
-                GameManager.highScore = score
+                manager.highScore = score
                 WKInterfaceController.reloadRootPageControllers(withNames: ["NewHighScore"], contexts: [], orientation: .vertical, pageIndex: 0)
             } else {
                 WKInterfaceController.reloadRootPageControllers(withNames: ["WrongAnswer"], contexts: [], orientation: .vertical, pageIndex: 0)

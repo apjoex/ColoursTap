@@ -10,12 +10,16 @@ import Foundation
 import UIKit
 
 struct Colour {
-    let red: CGFloat
-    let green: CGFloat
-    let blue: CGFloat
+    let color: UIColor
     let name: String
     
-    var output: UIColor {
-        UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1.0)
+    init(color: UIColor, name: String) {
+        self.color = color
+        self.name = name
+    }
+    
+    init(red: CGFloat, green: CGFloat, blue: CGFloat, name: String) {
+        let color =  UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1.0)
+        self.init(color: color, name: name)
     }
 }
