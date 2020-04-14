@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15702" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="16096" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15501"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="16012"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="FredokaOne-Regular.ttf">
+            <string>FredokaOne-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Home-->
         <scene sceneID="aou-V4-d1y">
@@ -48,7 +53,7 @@ Akinde-peters Joseph @apjoex</string>
                                     <fontDescription key="font" type="boldSystem" pointSize="16"/>
                                 </label>
                                 <label alignment="center" verticalAlignment="center" text="Purple" numberOfLines="0" id="jBh-FW-HBk">
-                                    <fontDescription key="font" type="boldSystem" pointSize="32"/>
+                                    <fontDescription key="font" name="FredokaOne-Regular" family="Fredoka One" pointSize="32"/>
                                 </label>
                                 <timer alignment="center" verticalAlignment="bottom" hidden="YES" enabled="YES" previewedSeconds="5" id="aF5-ID-hFp">
                                     <calendarUnit key="units" minute="YES" second="YES"/>
@@ -90,8 +95,7 @@ Akinde-peters Joseph @apjoex</string>
             <objects>
                 <controller identifier="TimeUp" spacing="8" id="WoP-bv-2CV" customClass="TimeUpInterfaceController" customModule="ColourTap_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text=" " id="gRm-5o-ubi"/>
-                        <imageView width="75" height="75" alignment="center" image="alarm" contentMode="scaleAspectFit" id="UPz-xw-IK0"/>
+                        <imageView width="60" height="60" alignment="center" image="alarm" contentMode="scaleAspectFit" id="UPz-xw-IK0"/>
                         <label alignment="center" text="Time Up!" id="BMy-XU-LkJ">
                             <fontDescription key="font" type="boldSystem" pointSize="20"/>
                         </label>
@@ -114,6 +118,15 @@ Akinde-peters Joseph @apjoex</string>
                             </connections>
                         </button>
                     </items>
+                    <menu key="menu" id="MM4-nm-Kw1">
+                        <items>
+                            <menuItem title="Try Again" icon="repeat" id="vKs-46-inu">
+                                <connections>
+                                    <action selector="retry" destination="WoP-bv-2CV" id="qLZ-C7-0qj"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="scoreLabel" destination="LCf-fW-SQJ" id="cGk-q7-coq"/>
                     </connections>
@@ -126,8 +139,7 @@ Akinde-peters Joseph @apjoex</string>
             <objects>
                 <controller identifier="WrongAnswer" id="9y2-8s-msf" customClass="WrongAnswerInterfaceController" customModule="ColourTap_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text=" " id="D0c-Pc-QTX"/>
-                        <imageView width="75" height="75" alignment="center" image="wrong" contentMode="scaleAspectFit" id="e76-Om-E5G"/>
+                        <imageView width="60" height="60" alignment="center" image="wrong" contentMode="scaleAspectFit" id="e76-Om-E5G"/>
                         <label alignment="center" text="Incorrect" id="mxr-26-eTw">
                             <fontDescription key="font" type="boldSystem" pointSize="20"/>
                         </label>
@@ -159,16 +171,15 @@ Akinde-peters Joseph @apjoex</string>
             <objects>
                 <controller identifier="NewHighScore" id="Pwp-4J-hwM" customClass="NewHighScoreInterfaceController" customModule="ColourTap_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text=" " id="Ics-ej-ZPQ"/>
-                        <imageView width="75" height="75" alignment="center" image="trophy" contentMode="scaleAspectFit" id="Neo-8K-Xik"/>
+                        <imageView width="60" height="60" alignment="center" image="trophy" contentMode="scaleAspectFit" id="Neo-8K-Xik"/>
                         <label alignment="center" text="WooHoo!" id="bAX-tg-hvA">
                             <fontDescription key="font" type="boldSystem" pointSize="20"/>
                         </label>
-                        <label width="1" alignment="left" text="You have outdone yourself and set a new high score!" textAlignment="center" numberOfLines="0" id="L3N-vo-Uct">
+                        <label width="1" alignment="left" text="You have set a new high score!" textAlignment="center" numberOfLines="0" id="L3N-vo-Uct">
                             <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
                         </label>
                         <label alignment="center" text="0" numberOfLines="0" id="uaq-vf-iBZ">
-                            <fontDescription key="font" type="system" pointSize="24"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="24"/>
                         </label>
                         <button width="0.90000000000000002" alignment="center" title="Take me Home" id="C9F-Kx-mY3">
                             <connections>
@@ -234,13 +245,16 @@ At intervals, a colour will be displayed on the screen along with a name of a co
                         <group width="1" alignment="center" verticalAlignment="center" layout="vertical" spacing="6" id="cQp-AI-Vzm">
                             <items>
                                 <label alignment="center" text="Your current high score is" textAlignment="center" numberOfLines="0" id="EpD-O1-QXV">
-                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
                                 </label>
                                 <label alignment="center" text="0" id="iKr-BV-dHX">
-                                    <fontDescription key="font" type="system" pointSize="24"/>
+                                    <fontDescription key="font" type="boldSystem" pointSize="24"/>
                                 </label>
                             </items>
                         </group>
+                        <label alignment="center" verticalAlignment="bottom" text="v 1.0" id="qiU-yB-bDx">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
                     </items>
                     <connections>
                         <outlet property="highScoreLabel" destination="iKr-BV-dHX" id="ppk-pT-5G2"/>
