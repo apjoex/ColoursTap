@@ -93,36 +93,35 @@ Akinde-peters Joseph @apjoex</string>
         <!--TimeUp-->
         <scene sceneID="OIR-z9-sFY">
             <objects>
-                <controller identifier="TimeUp" spacing="8" id="WoP-bv-2CV" customClass="TimeUpInterfaceController" customModule="ColourTap_WatchKit_Extension">
+                <controller identifier="TimeUp" spacing="8" fullBounds="YES" id="WoP-bv-2CV" customClass="TimeUpInterfaceController" customModule="ColourTap_WatchKit_Extension">
                     <items>
-                        <imageView width="60" height="60" alignment="center" image="alarm" contentMode="scaleAspectFit" id="UPz-xw-IK0"/>
-                        <label alignment="center" text="Time Up!" id="BMy-XU-LkJ">
-                            <fontDescription key="font" type="boldSystem" pointSize="20"/>
-                        </label>
-                        <label width="1" alignment="left" text="You have to be faster next time." textAlignment="center" numberOfLines="0" id="G2n-ai-bzg">
-                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
-                        </label>
-                        <label width="1" alignment="left" textAlignment="center" numberOfLines="0" id="LCf-fW-SQJ">
-                            <string key="text">Score:
+                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="tyX-6T-KJx">
+                            <items>
+                                <imageView width="60" height="60" alignment="center" image="alarm" contentMode="scaleAspectFit" id="UPz-xw-IK0"/>
+                                <label alignment="center" text="Time Up!" id="BMy-XU-LkJ">
+                                    <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                                </label>
+                                <label width="1" alignment="left" text="Be faster next time" textAlignment="center" numberOfLines="0" id="G2n-ai-bzg">
+                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                </label>
+                                <label width="1" alignment="left" textAlignment="center" numberOfLines="0" id="LCf-fW-SQJ">
+                                    <string key="text">Score:
 </string>
-                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
-                        </label>
-                        <button width="0.90000000000000002" alignment="center" title="Try Again" id="LdR-kx-0SP">
-                            <connections>
-                                <action selector="retry" destination="WoP-bv-2CV" id="xTp-31-yZ9"/>
-                            </connections>
-                        </button>
-                        <button width="0.90000000000000002" alignment="center" title="Take me Home" id="Yib-7I-LeY">
-                            <connections>
-                                <action selector="goHome" destination="WoP-bv-2CV" id="XqJ-zB-Mmj"/>
-                            </connections>
-                        </button>
+                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                </label>
+                            </items>
+                        </group>
                     </items>
                     <menu key="menu" id="MM4-nm-Kw1">
                         <items>
                             <menuItem title="Try Again" icon="repeat" id="vKs-46-inu">
                                 <connections>
                                     <action selector="retry" destination="WoP-bv-2CV" id="qLZ-C7-0qj"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Take me Home" image="home" id="IiX-7o-VJk">
+                                <connections>
+                                    <action selector="goHome" destination="WoP-bv-2CV" id="Zw7-vH-zrc"/>
                                 </connections>
                             </menuItem>
                         </items>
@@ -137,28 +136,39 @@ Akinde-peters Joseph @apjoex</string>
         <!--WrongAnswer-->
         <scene sceneID="s65-Ag-GLP">
             <objects>
-                <controller identifier="WrongAnswer" id="9y2-8s-msf" customClass="WrongAnswerInterfaceController" customModule="ColourTap_WatchKit_Extension">
+                <controller identifier="WrongAnswer" fullBounds="YES" id="9y2-8s-msf" customClass="WrongAnswerInterfaceController" customModule="ColourTap_WatchKit_Extension">
                     <items>
-                        <imageView width="60" height="60" alignment="center" image="wrong" contentMode="scaleAspectFit" id="e76-Om-E5G"/>
-                        <label alignment="center" text="Incorrect" id="mxr-26-eTw">
-                            <fontDescription key="font" type="boldSystem" pointSize="20"/>
-                        </label>
-                        <label width="1" alignment="left" textAlignment="center" numberOfLines="0" id="7kK-0g-AZC">
-                            <string key="text"> Score: 
+                        <group width="1" alignment="center" verticalAlignment="bottom" layout="vertical" id="BPe-4T-Qnv">
+                            <items>
+                                <imageView width="60" height="60" alignment="center" image="wrong" contentMode="scaleAspectFit" id="e76-Om-E5G"/>
+                                <label alignment="center" text="Incorrect" id="mxr-26-eTw">
+                                    <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                                </label>
+                                <label width="1" alignment="left" text="Better luck next time" textAlignment="center" numberOfLines="0" id="BQZ-gd-nme">
+                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                </label>
+                                <label width="1" alignment="left" textAlignment="center" numberOfLines="0" id="7kK-0g-AZC">
+                                    <string key="text"> Score: 
 </string>
-                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
-                        </label>
-                        <button width="0.90000000000000002" alignment="center" title="Try Again" id="3Vm-s6-Wp3">
-                            <connections>
-                                <action selector="retry" destination="9y2-8s-msf" id="u9V-WB-7sb"/>
-                            </connections>
-                        </button>
-                        <button width="0.90000000000000002" alignment="center" title="Take me Home" id="dGT-4w-x3D">
-                            <connections>
-                                <action selector="goHome" destination="9y2-8s-msf" id="BKe-uk-3H5"/>
-                            </connections>
-                        </button>
+                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                </label>
+                            </items>
+                        </group>
                     </items>
+                    <menu key="menu" id="17P-Dp-hEd">
+                        <items>
+                            <menuItem title="Try Again" icon="repeat" id="94N-iM-KYH">
+                                <connections>
+                                    <action selector="retry" destination="9y2-8s-msf" id="7Td-5t-lr2"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Take me Home" image="home" id="qZ8-M4-Jux">
+                                <connections>
+                                    <action selector="goHome" destination="9y2-8s-msf" id="Ocz-XT-tJz"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="scoreLabel" destination="7kK-0g-AZC" id="Tf5-xR-XM4"/>
                     </connections>
@@ -169,24 +179,32 @@ Akinde-peters Joseph @apjoex</string>
         <!--NewHighScore-->
         <scene sceneID="ZQF-YH-kyo">
             <objects>
-                <controller identifier="NewHighScore" id="Pwp-4J-hwM" customClass="NewHighScoreInterfaceController" customModule="ColourTap_WatchKit_Extension">
+                <controller identifier="NewHighScore" fullBounds="YES" id="Pwp-4J-hwM" customClass="NewHighScoreInterfaceController" customModule="ColourTap_WatchKit_Extension">
                     <items>
-                        <imageView width="60" height="60" alignment="center" image="trophy" contentMode="scaleAspectFit" id="Neo-8K-Xik"/>
-                        <label alignment="center" text="WooHoo!" id="bAX-tg-hvA">
-                            <fontDescription key="font" type="boldSystem" pointSize="20"/>
-                        </label>
-                        <label width="1" alignment="left" text="You have set a new high score!" textAlignment="center" numberOfLines="0" id="L3N-vo-Uct">
-                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
-                        </label>
-                        <label alignment="center" text="0" numberOfLines="0" id="uaq-vf-iBZ">
-                            <fontDescription key="font" type="boldSystem" pointSize="24"/>
-                        </label>
-                        <button width="0.90000000000000002" alignment="center" title="Take me Home" id="C9F-Kx-mY3">
-                            <connections>
-                                <action selector="goHome" destination="Pwp-4J-hwM" id="D6g-Ph-3vC"/>
-                            </connections>
-                        </button>
+                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="zCU-me-RYn">
+                            <items>
+                                <imageView width="60" height="60" alignment="center" image="trophy" contentMode="scaleAspectFit" id="Neo-8K-Xik"/>
+                                <label alignment="center" text="WooHoo!" id="bAX-tg-hvA">
+                                    <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                                </label>
+                                <label width="1" alignment="left" text="You have set a new high score!" textAlignment="center" numberOfLines="0" id="L3N-vo-Uct">
+                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                </label>
+                                <label alignment="center" text="0" numberOfLines="0" id="uaq-vf-iBZ">
+                                    <fontDescription key="font" type="boldSystem" pointSize="24"/>
+                                </label>
+                            </items>
+                        </group>
                     </items>
+                    <menu key="menu" id="WuQ-Kp-2h0">
+                        <items>
+                            <menuItem title="Take me Home" image="home" id="fkT-ph-8yy">
+                                <connections>
+                                    <action selector="goHome" destination="Pwp-4J-hwM" id="FSX-Pj-EjJ"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="highScoreLabel" destination="uaq-vf-iBZ" id="UvG-zm-NXg"/>
                     </connections>
@@ -274,6 +292,7 @@ At intervals, a colour will be displayed on the screen along with a name of a co
     </scenes>
     <resources>
         <image name="alarm" width="300" height="295"/>
+        <image name="home" width="24" height="24"/>
         <image name="logo" width="300" height="292"/>
         <image name="trophy" width="300" height="300"/>
         <image name="wrong" width="300" height="300"/>
