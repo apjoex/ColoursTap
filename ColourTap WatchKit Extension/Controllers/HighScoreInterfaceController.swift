@@ -12,15 +12,18 @@ import Foundation
 class HighScoreInterfaceController: WKInterfaceController {
 
     @IBOutlet weak var highScoreLabel: WKInterfaceLabel!
+    @IBOutlet weak var versionLabel: WKInterfaceLabel!
     
     let manager = GameManager.shared
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
         let highScore = manager.highScore
         highScoreLabel.setText("\(highScore)")
+        
+        let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
+        versionLabel.setText("v \(version)")
     }
 
     override func willActivate() {

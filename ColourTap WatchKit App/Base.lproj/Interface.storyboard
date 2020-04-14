@@ -253,11 +253,12 @@ At intervals, a colour will be displayed on the screen along with a name of a co
                             </items>
                         </group>
                         <label alignment="center" verticalAlignment="bottom" text="v 1.0" id="qiU-yB-bDx">
-                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                            <fontDescription key="font" type="system" pointSize="9"/>
                         </label>
                     </items>
                     <connections>
                         <outlet property="highScoreLabel" destination="iKr-BV-dHX" id="ppk-pT-5G2"/>
+                        <outlet property="versionLabel" destination="qiU-yB-bDx" id="YWQ-oT-Wu0"/>
                     </connections>
                 </controller>
             </objects>
