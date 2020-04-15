@@ -138,7 +138,7 @@ Akinde-peters Joseph @apjoex</string>
             <objects>
                 <controller identifier="WrongAnswer" fullBounds="YES" id="9y2-8s-msf" customClass="WrongAnswerInterfaceController" customModule="ColourTap_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="center" verticalAlignment="bottom" layout="vertical" id="BPe-4T-Qnv">
+                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="BPe-4T-Qnv">
                             <items>
                                 <imageView width="60" height="60" alignment="center" image="wrong" contentMode="scaleAspectFit" id="e76-Om-E5G"/>
                                 <label alignment="center" text="Incorrect" id="mxr-26-eTw">
