@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="16096" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="16012"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -221,9 +221,9 @@ Akinde-peters Joseph @apjoex</string>
                             <string key="text">
 At intervals, a colour will be displayed on the screen along with a name of a colour.
 
-∙ TAP if the name of the color matches the color displayed.
+∙ TAP if the name of the colour matches the colour displayed.
 
-∙ SWIPE if the name of the color does not match the color displayed.</string>
+∙ SWIPE if the name of the colour does not match the color displayed.</string>
                             <fontDescription key="font" style="UICTFontTextStyleBody"/>
                         </label>
                     </items>
