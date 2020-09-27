@@ -32,7 +32,7 @@
                                 <segue destination="3Us-wr-seN" kind="push" id="Ivf-bM-9Sz"/>
                             </connections>
                         </button>
-                        <label width="136" alignment="center" textAlignment="center" numberOfLines="0" id="9FE-A9-Oof">
+                        <label alignment="center" textAlignment="center" numberOfLines="0" id="9FE-A9-Oof">
                             <string key="text">Built by 
 Akinde-peters Joseph @apjoex</string>
                             <fontDescription key="font" type="system" pointSize="9"/>
@@ -93,7 +93,7 @@ Akinde-peters Joseph @apjoex</string>
         <!--TimeUp-->
         <scene sceneID="OIR-z9-sFY">
             <objects>
-                <controller identifier="TimeUp" spacing="8" fullBounds="YES" id="WoP-bv-2CV" customClass="TimeUpInterfaceController" customModule="ColourTap_WatchKit_Extension">
+                <controller identifier="TimeUp" spacing="8" id="WoP-bv-2CV" customClass="TimeUpInterfaceController" customModule="ColourTap_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="tyX-6T-KJx">
                             <items>
@@ -146,7 +146,7 @@ Akinde-peters Joseph @apjoex</string>
         <!--WrongAnswer-->
         <scene sceneID="s65-Ag-GLP">
             <objects>
-                <controller identifier="WrongAnswer" fullBounds="YES" id="9y2-8s-msf" customClass="WrongAnswerInterfaceController" customModule="ColourTap_WatchKit_Extension">
+                <controller identifier="WrongAnswer" id="9y2-8s-msf" customClass="WrongAnswerInterfaceController" customModule="ColourTap_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="BPe-4T-Qnv">
                             <items>
@@ -199,7 +199,7 @@ Akinde-peters Joseph @apjoex</string>
         <!--NewHighScore-->
         <scene sceneID="ZQF-YH-kyo">
             <objects>
-                <controller identifier="NewHighScore" fullBounds="YES" id="Pwp-4J-hwM" customClass="NewHighScoreInterfaceController" customModule="ColourTap_WatchKit_Extension">
+                <controller identifier="NewHighScore" id="Pwp-4J-hwM" customClass="NewHighScoreInterfaceController" customModule="ColourTap_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="zCU-me-RYn">
                             <items>

@@ -17,7 +17,7 @@ class TimeUpInterfaceController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        scoreLabel.setText("Your score: \(manager.currentScore)")
+        scoreLabel.setText("Your score: \(manager.currentScore)\n")
     }
 
     @IBAction func retry() {
