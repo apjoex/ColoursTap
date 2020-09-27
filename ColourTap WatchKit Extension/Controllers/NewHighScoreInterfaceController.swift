@@ -20,6 +20,10 @@ class NewHighScoreInterfaceController: WKInterfaceController {
         let highScore = manager.highScore
         highScoreLabel.setText("\(highScore)\n")
     }
+    
+    @IBAction func retry() {
+        WKInterfaceController.reloadRootPageControllers(withNames: ["Game"], contexts: [], orientation: .vertical, pageIndex: 0)
+    }
 
     @IBAction func goHome() {
         WKInterfaceController.reloadRootPageControllers(withNames: ["Home"], contexts: [], orientation: .vertical, pageIndex: 0)

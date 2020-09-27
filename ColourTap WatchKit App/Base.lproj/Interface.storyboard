@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="16096" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="16097.3" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -97,9 +97,9 @@ Akinde-peters Joseph @apjoex</string>
                     <items>
                         <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="tyX-6T-KJx">
                             <items>
-                                <imageView width="60" height="60" alignment="center" image="alarm" contentMode="scaleAspectFit" id="UPz-xw-IK0"/>
+                                <imageView width="40" height="40" alignment="center" image="alarm" contentMode="scaleAspectFit" id="UPz-xw-IK0"/>
                                 <label alignment="center" text="Time Up!" id="BMy-XU-LkJ">
-                                    <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                                 </label>
                                 <label width="1" alignment="left" text="Be faster next time" textAlignment="center" numberOfLines="0" id="G2n-ai-bzg">
                                     <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
@@ -109,6 +109,16 @@ Akinde-peters Joseph @apjoex</string>
 </string>
                                     <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
                                 </label>
+                                <button width="0.90000000000000002" alignment="center" title="Try again" id="9G1-2I-b0I">
+                                    <connections>
+                                        <action selector="retry" destination="WoP-bv-2CV" id="ird-BH-2Ok"/>
+                                    </connections>
+                                </button>
+                                <button width="0.90000000000000002" alignment="center" title="Take me home" id="SRQ-0G-fBA">
+                                    <connections>
+                                        <action selector="goHome" destination="WoP-bv-2CV" id="yI8-RX-B8n"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                     </items>
@@ -140,9 +150,9 @@ Akinde-peters Joseph @apjoex</string>
                     <items>
                         <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="BPe-4T-Qnv">
                             <items>
-                                <imageView width="60" height="60" alignment="center" image="wrong" contentMode="scaleAspectFit" id="e76-Om-E5G"/>
+                                <imageView width="40" height="40" alignment="center" image="wrong" contentMode="scaleAspectFit" id="e76-Om-E5G"/>
                                 <label alignment="center" text="Incorrect" id="mxr-26-eTw">
-                                    <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                                 </label>
                                 <label width="1" alignment="left" text="Better luck next time" textAlignment="center" numberOfLines="0" id="BQZ-gd-nme">
                                     <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
@@ -152,6 +162,16 @@ Akinde-peters Joseph @apjoex</string>
 </string>
                                     <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
                                 </label>
+                                <button width="0.90000000000000002" alignment="center" title="Try again" id="uQa-1g-kbM">
+                                    <connections>
+                                        <action selector="retry" destination="9y2-8s-msf" id="2JP-Q5-ly9"/>
+                                    </connections>
+                                </button>
+                                <button width="0.90000000000000002" alignment="center" title="Take me home" id="gtS-Zx-zYI">
+                                    <connections>
+                                        <action selector="goHome" destination="9y2-8s-msf" id="RfZ-tz-jDU"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                     </items>
@@ -183,9 +203,9 @@ Akinde-peters Joseph @apjoex</string>
                     <items>
                         <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="zCU-me-RYn">
                             <items>
-                                <imageView width="60" height="60" alignment="center" image="trophy" contentMode="scaleAspectFit" id="Neo-8K-Xik"/>
+                                <imageView width="40" height="40" alignment="center" image="trophy" contentMode="scaleAspectFit" id="Neo-8K-Xik"/>
                                 <label alignment="center" text="WooHoo!" id="bAX-tg-hvA">
-                                    <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                                 </label>
                                 <label width="1" alignment="left" text="You have set a new high score!" textAlignment="center" numberOfLines="0" id="L3N-vo-Uct">
                                     <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
@@ -193,6 +213,16 @@ Akinde-peters Joseph @apjoex</string>
                                 <label alignment="center" text="0" numberOfLines="0" id="uaq-vf-iBZ">
                                     <fontDescription key="font" type="boldSystem" pointSize="24"/>
                                 </label>
+                                <button width="0.90000000000000002" alignment="center" title="Try again" id="xU8-UE-HDr">
+                                    <connections>
+                                        <action selector="retry" destination="Pwp-4J-hwM" id="JaM-76-74S"/>
+                                    </connections>
+                                </button>
+                                <button width="0.90000000000000002" alignment="center" title="Take me home" id="Gxj-jt-3pj">
+                                    <connections>
+                                        <action selector="goHome" destination="Pwp-4J-hwM" id="QgJ-Ff-pbc"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                     </items>
@@ -200,7 +230,7 @@ Akinde-peters Joseph @apjoex</string>
                         <items>
                             <menuItem title="Take me Home" image="home" id="fkT-ph-8yy">
                                 <connections>
-                                    <action selector="goHome" destination="Pwp-4J-hwM" id="FSX-Pj-EjJ"/>
+                                    <action selector="goHome" destination="Pwp-4J-hwM" id="I5i-zL-20g"/>
                                 </connections>
                             </menuItem>
                         </items>
@@ -219,7 +249,7 @@ Akinde-peters Joseph @apjoex</string>
                     <items>
                         <label alignment="left" numberOfLines="0" id="WWh-v7-Bum">
                             <string key="text">
-At intervals, a colour will be displayed on the screen along with a name of a colour.
+At intervals, a colour is displayed on the screen along with a name of a colour.
 
 ∙ TAP if the name of the colour matches the colour displayed.
 
